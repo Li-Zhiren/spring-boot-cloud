@@ -3,15 +3,22 @@ server:
 
 eureka:
   instance:
-    hostname: registry
-    prefer-ip-address: true
+    hostname: 127.0.0.1
+    prefer-ip-address: false
   client:
-    registerWithEureka: false
+    # 由于该应用为注册中心，所以设置为false，代表不向注册中心注册自己
+    registerWithEureka: true
+    # 由于注册中心的职责就是维护服务实例，他并不需要去检索服务，所以也设置为false
     fetchRegistry: false
     service-url:
-      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      sdefaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
 
 security:
   user:
+    #security.basic.enabled=true #开启认证 没设置也开启了  应该是默认开启的
     name: user
     password: ${REGISTRY_SERVER_PASSWORD:password}
+#    password: 2222
+  basic:
+    enabled: true
+

@@ -2,7 +2,10 @@ spring:
   application:
     name: zipkin
   rabbitmq:
-    host: rabbitmq
+    host: 104.243.20.180
+    username: shenzhi0222
+    password: shenlzr66
+    port: 15672
 
 server:
   port: 9411
