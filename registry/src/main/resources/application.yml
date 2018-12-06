@@ -11,14 +11,13 @@ eureka:
     # 由于注册中心的职责就是维护服务实例，他并不需要去检索服务，所以也设置为false
     fetchRegistry: false
     service-url:
-      sdefaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
 
 security:
   user:
     #security.basic.enabled=true #开启认证 没设置也开启了  应该是默认开启的
     name: user
     password: ${REGISTRY_SERVER_PASSWORD:password}
-#    password: 2222
   basic:
     enabled: true
 
