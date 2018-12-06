@@ -1,3 +1,3 @@
 spring:
   application:
-    name: 127.0.0.1
+    name: registry
