@@ -18,19 +18,19 @@
 #  ReadTimeout: 5000
 #  ConnectTimeout: 5000
 #
-#spring:
-#  rabbitmq:
-#    host: 104.243.20.180
-#    username: shenzhi0222
-#    password: shenlzr66
-#  sleuth:
-#    sampler:
-#      percentage: 1
-#    integration:
-#      enabled: false
-#    scheduled:
-#      skip-pattern: "^org.*HystrixStreamTask$"
-#
+spring:
+  rabbitmq:
+    host: 104.243.20.180
+    username: shenzhi0222
+    password: shenlzr66
+  sleuth:
+    sampler:
+      percentage: 1
+    integration:
+      enabled: false
+    scheduled:
+      skip-pattern: "^org.*HystrixStreamTask$"
+
 #authserver:
 #    hostname: 127.0.0.1
 #    port: 5000
