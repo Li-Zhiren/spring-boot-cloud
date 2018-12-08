@@ -1,23 +1,23 @@
-#eureka:
-#  instance:
-#    hostname: 127.0.0.1
-#    prefer-ip-address: true
-#  client:
-#    service-url:
-#      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@127.0.0.1:8761/eureka/
+eureka:
+  instance:
+    hostname: 127.0.0.1
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://user:${REGISTRY_SERVER_PASSWORD:password}@127.0.0.1:8761/eureka/
 
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 10000
-#
-#ribbon:
-#  ReadTimeout: 5000
-#  ConnectTimeout: 5000
-#
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
+
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
 spring:
   rabbitmq:
     host: 104.243.20.180
@@ -31,12 +31,12 @@ spring:
     scheduled:
       skip-pattern: "^org.*HystrixStreamTask$"
 
-#authserver:
-#    hostname: 127.0.0.1
-#    port: 5000
-#    contextPath: /uaa
-#
-#security:
-#  oauth2:
-#    resource:
-#      user-info-uri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/current
+authserver:
+    hostname: 127.0.0.1
+    port: 5000
+    contextPath: /uaa
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/current
