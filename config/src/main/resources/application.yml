@@ -21,8 +21,8 @@ spring:
           search-paths: config-repo
   rabbitmq:
     host: 104.243.20.180
-    username: shenzhi0222
-    password: shenlzr66
+#    username: shenzhi0222
+#    password: shenlzr66
 
 security:
   user:
